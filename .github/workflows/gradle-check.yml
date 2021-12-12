@@ -1,4 +1,4 @@
-name: Gralde check
+name: Gradle check
 
 on:
   push:
