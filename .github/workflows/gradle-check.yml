@@ -17,3 +17,4 @@ jobs:
       - name: Build
         run: |
           ./gradlew :app:assembleDebug
+          mv app/build/outputs/apk/debug/* out/
