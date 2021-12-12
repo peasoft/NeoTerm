@@ -17,4 +17,9 @@ jobs:
       - name: Build
         run: |
           ./gradlew :app:assembleDebug
-          mv app/build/outputs/apk/debug/* out/
+      - name : upload apk
+        uses: actions/upload-artifact@master
+        if: always()
+        with:
+          name: Neoterm-Debug
+          path: ${{ github.workspace }}/app/build/outputs/apk/debug
